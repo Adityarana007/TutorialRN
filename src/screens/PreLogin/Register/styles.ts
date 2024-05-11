@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
     signupText:{
         fontSize: 28,
         fontFamily: fonts.mulishBlack,
-        marginTop: -30
+        marginTop: -30,
+        color: colors.yellow
     }
 });
 export default styles;

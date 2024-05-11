@@ -18,7 +18,9 @@ const styles = StyleSheet.create({
         backgroundColor: colors.lightGrey,
         height: moderateScale(38),
         paddingHorizontal: moderateScale(20),
-        borderRadius: 12
+        borderRadius: 12,
+        fontFamily: fonts.mulishRegular,
+        fontSize: 16
     },
     upperTextView: {
         alignItems: 'center',
