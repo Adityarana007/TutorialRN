@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "302401678245",
+    "project_id": "tutorialrn-21a6c",
+    "storage_bucket": "tutorialrn-21a6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302401678245:android:377b44c2d429a03f5c564c",
+        "android_client_info": {
+          "package_name": "com.tutorialrn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc0zcwOcQcMLxBtDO8PzbPuPj4rlowas0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
