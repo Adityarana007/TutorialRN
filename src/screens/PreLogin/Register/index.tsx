@@ -7,6 +7,8 @@ import {ScreenNameKeys} from '../../../constants/ScreenNameKeys';
 import InputBox from '../../../components/InputBox';
 import {Icons} from '../../../assets/icons';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import auth from '@react-native-firebase/auth';
+import { toast, toastType } from '../../../utils/constants';
 
 const Register = () => {
   const [username, setUserName] = useState('');
@@ -16,9 +18,29 @@ const Register = () => {
 
 
   const navigation = useNav();
-  const onLoginPress = () => {
-    navigation.navigate(ScreenNameKeys.HOME_TAB);
-  };
+  const onRegisterPress = async () => {
+    // navigation.navigate(ScreenNameKeys.HOME_TAB);
+    auth()
+  .createUserWithEmailAndPassword(email, password)
+  .then(() => {
+    console.log('User account created & signed in!');
+    toast('User account created & signed in!', toastType.SUCESS_TOAST)
+    navigation.navigate(ScreenNameKeys.LOGIN);
+  })
+  .catch(error => {
+    if (error.code === 'auth/email-already-in-use') {
+    toast('That email address is already in use.', toastType.ERROR_TOAST)
+
+    }
+
+    if (error.code === 'auth/invalid-email') {
+    toast('That email address is invalid.', toastType.ERROR_TOAST)
+
+    }
+
+    // console.error(error);
+  });
+  };  
 
   const onUsernameChange = (value: string) => {
     setUserName(value);
@@ -79,7 +101,7 @@ const Register = () => {
           />
         </View>
         <View style={styles.btnOuterView}>
-          <Button title="Register" onPress={onLoginPress} />
+          <Button title="Register" onPress={onRegisterPress} />
         </View>
         <View style={styles.noAccountOuterView}>
           <Pressable style={styles.signupTextOuterView} onPress={onBackPress}>

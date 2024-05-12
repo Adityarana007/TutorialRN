@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.white,
         alignItems: 'center',
-        flexGrow: 1
+        // flexGrow: 1
     },
     signinContinueView: {
         marginTop: moderateScaleVertical(60),
@@ -39,6 +39,20 @@ const styles = StyleSheet.create({
     },
     signupTextOuterView:{
         justifyContent: 'flex-end'
+    },
+    anotherSigninView:{
+        marginTop: 30,
+        backgroundColor: colors.yellow,
+        paddingHorizontal: moderateScaleVertical(20),
+        paddingVertical: moderateScaleVertical(10),
+        borderRadius: 4,
+        flexDirection: 'row'
+    },
+    googleText:{
+        color: colors.black,
+        fontSize: 14,
+        fontFamily: fonts.mulishBlack,
+        marginLeft: 8
     }
 });
 export default styles;

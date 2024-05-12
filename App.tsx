@@ -5,37 +5,29 @@
  * @format
  */
 
-import React, { useEffect } from 'react';
-import {
-  StatusBar,
-  StyleSheet,
-} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {StatusBar} from 'react-native';
 
 import Routes from './src/navigation';
 import colors from './src/theme/colors';
-import BootSplash from "react-native-bootsplash";
-
+import BootSplash from 'react-native-bootsplash';
+import Toast from 'react-native-toast-message';
+import CustomToast from './src/components/Toast';
+import WrapperContainer from './src/components/WrapperContainer/WrapperContainer';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
 function App(): React.JSX.Element {
 
-  useEffect(() => {
-    setTimeout(async () => {
-      const init = async () => {
-        // …do multiple sync or async tasks
-      };
-  
-      init().finally(async () => {
-        await BootSplash.hide({ fade: true });
-        console.log("BootSplash has been hidden successfully");
-      })
-    }, 3000)
-;
-  }, []);
+  GoogleSignin.configure({
+    webClientId: '302401678245-l1io2gpomtesifchm1fsgnkiiv9k2t5n.apps.googleusercontent.com', // client ID of type WEB for your server. Required to get the idToken on the user object, and for offline access.
+   });
 
   return (
     <>
-    <StatusBar barStyle={'light-content'} backgroundColor={colors.black}/>
-    <Routes />
+    <WrapperContainer>
+      <CustomToast/>
+      <Routes />
+    </WrapperContainer>
     </>
   );
 }

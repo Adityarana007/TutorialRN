@@ -2,6 +2,7 @@
 #import <Firebase.h>
 #import <React/RCTBundleURLProvider.h>
 #import "RNBootSplash.h"
+#import <GoogleSignIn/GoogleSignIn.h>
 
 @implementation AppDelegate
 
@@ -37,5 +38,7 @@
   [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView]; // ⬅️ initialize the splash screen
   return rootView;
 }
+
+
 
 @end
