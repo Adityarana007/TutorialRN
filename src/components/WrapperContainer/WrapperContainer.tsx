@@ -9,6 +9,9 @@ interface Props {
 }
 
 const WrapperContainer = ({children}: Props) => {
+  /**
+   * Effect to hide the bootsplash
+   */
   useEffect(() => {
     setTimeout(async () => {
       const init = async () => {
