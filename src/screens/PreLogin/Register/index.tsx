@@ -60,6 +60,7 @@ const Register = () => {
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView
+        enableOnAndroid
         extraScrollHeight={240}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.container}
