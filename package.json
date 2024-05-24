@@ -12,6 +12,7 @@
     "run_ios": "npx react-native run-ios --simulator='iPhone 15 Pro'"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.23.1",
     "@react-native-firebase/app": "^19.2.2",
     "@react-native-firebase/auth": "^19.2.2",
     "@react-native-firebase/firestore": "^19.2.2",

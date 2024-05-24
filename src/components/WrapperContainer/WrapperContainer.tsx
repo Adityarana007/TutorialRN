@@ -1,5 +1,5 @@
 import React, {useContext, useEffect} from 'react';
-import {StatusBar, View} from 'react-native';
+import {SafeAreaView, StatusBar, View} from 'react-native';
 
 import colors from '../../theme/colors';
 import BootSplash from 'react-native-bootsplash';
@@ -28,8 +28,10 @@ const WrapperContainer = ({children}: Props) => {
   return (
     <View style={{flex: 1}}>
       <StatusBar barStyle={'dark-content'} backgroundColor={colors.white} />
+      <SafeAreaView style={{flex:1}}>
       {children}
       <CustomToast />
+      </SafeAreaView>
     </View>
   );
 };

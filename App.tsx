@@ -15,6 +15,7 @@ import Toast from 'react-native-toast-message';
 import CustomToast from './src/components/Toast';
 import WrapperContainer from './src/components/WrapperContainer/WrapperContainer';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import UserProvider from './src/stores/userStorage';
 
 function App(): React.JSX.Element {
 
@@ -23,12 +24,12 @@ function App(): React.JSX.Element {
    });
 
   return (
-    <>
+    <UserProvider>
     <WrapperContainer>
       <CustomToast/>
       <Routes />
     </WrapperContainer>
-    </>
+    </UserProvider>
   );
 }
 

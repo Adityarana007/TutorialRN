@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {
   Alert,
   Platform,
@@ -21,12 +21,13 @@ import {
   GoogleSignin,
   statusCodes,
 } from '@react-native-google-signin/google-signin';
+import { UserContext } from '../../../stores/userStorage';
 
 const Login = () => {
   const [username, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [userInfo, setUserInfo] = useState(null);
-
+  const {data, setDataToStore} = useContext(UserContext);
   const navigation = useNav();
   const checkValidation = () => {
     if(username?.trim()?.length === 0 ){
@@ -43,6 +44,7 @@ const Login = () => {
       auth()
       .signInWithEmailAndPassword(username, password)
       .then(res => {
+        console.log('res_login', res);
         toast('Logged in successfully.', toastType.SUCESS_TOAST);
         navigation.reset({
           index: 0,
@@ -69,13 +71,23 @@ const Login = () => {
 
   const onGoogleButtonPress = async () => {
     // Check if your device supports Google Play
+    console.log('googleResp', await GoogleSignin.signIn());
     await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
     // Get the users ID token
-    const {idToken} = await GoogleSignin.signIn();
+    const {idToken, user} = await GoogleSignin.signIn();
     
     // Create a Google credential with the token
     const googleCredential = auth.GoogleAuthProvider.credential(idToken);
     if(idToken) {
+      setDataToStore({
+        ...data,
+        userData:{
+          ...data.userData,
+          name: user?.name,
+          profileUrl: user?.photo,
+          email: user?.email
+        }
+      })
       toast('Logged in successfully.', toastType.SUCESS_TOAST);
         navigation.reset({
           index: 0,

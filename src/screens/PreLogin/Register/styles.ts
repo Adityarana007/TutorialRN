@@ -5,7 +5,7 @@ import fonts from "../../../assets/fonts";
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         backgroundColor: colors.white,
         alignItems: 'center',
         flexGrow: 1
@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     signupTextOuterView:{
-        justifyContent: 'flex-end'
+        justifyContent: 'flex-end',
+        paddingBottom: moderateScaleVertical(60)
     },
     signupText:{
         fontSize: 28,

@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
 
     },
     signinContinueView: {
-        marginTop: moderateScaleVertical(60),
+        marginTop: moderateScaleVertical(20),
     },
     signinText: {
         fontSize: textScale(24),
