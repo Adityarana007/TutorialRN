@@ -5,6 +5,7 @@ import ProfileFill from './profileFill.svg';
 import BackIcon from './BackIcon.svg';
 import Logo from './Logo.svg';
 import GoogleLogo from './Google.svg'
+import Hamburger from './Hamburger.svg'
 
 
 export const Icons = {
@@ -14,5 +15,6 @@ export const Icons = {
     ProfileFill,
     BackIcon,
     Logo,
-    GoogleLogo
+    GoogleLogo,
+    Hamburger
 }

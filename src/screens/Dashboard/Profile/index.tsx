@@ -13,7 +13,7 @@ import colors from '../../../theme/colors';
 
 const Profile = () => {
     const navigation = useNav();
-    const {data} = useContext(UserContext);
+    const {data, setDataToStore} = useContext(UserContext);
     const onLogout = () => {
       auth()
   .signOut()
@@ -24,7 +24,10 @@ const Profile = () => {
       index: 0,
       routes: [{name: ScreenNameKeys.LOGIN}],
     });
-
+    setDataToStore({
+      ...data,
+      userData: {},
+    });
   });
     }
     return(

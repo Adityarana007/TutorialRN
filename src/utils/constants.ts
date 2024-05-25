@@ -33,3 +33,5 @@ export const toast = (title: string, type: string) => {
     SUCESS_TOAST: 'successToast',
     ERROR_TOAST: 'errorToast',
   };
+
+  

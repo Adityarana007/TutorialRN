@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     titleStyle:{
         fontSize: textScale(18),
         color: colors.black,
-        fontFamily: fonts.mulishBlack
+        fontFamily: fonts.mulishBlack,
+        textAlign: 'center'
     }
 })

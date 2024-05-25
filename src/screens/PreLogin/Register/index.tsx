@@ -9,6 +9,9 @@ import {Icons} from '../../../assets/icons';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import auth from '@react-native-firebase/auth';
 import {toast, toastType} from '../../../utils/constants';
+import firestore from '@react-native-firebase/firestore';
+import { FirebaseKeys } from '../../../utils/ConstantKeys';
+
 
 const Register = () => {
   const [username, setUserName] = useState('');
@@ -17,6 +20,20 @@ const Register = () => {
   const [email, setEmail] = useState('');
 
   const navigation = useNav();
+
+  // Add the registered user in cloud firestore
+  const addDocument = async () => {
+    await firestore()
+    .collection(FirebaseKeys.USERS)
+    .add({
+      name: username,
+      email: email,
+      password: password
+    })
+    .then(() => {
+      console.log('User Added in Firestore Successfully!');
+    });
+  }
 
   const checkValidation = () => {
     if (username?.trim()?.length === 0) {
@@ -35,6 +52,7 @@ const Register = () => {
       auth()
         .createUserWithEmailAndPassword(email, password)
         .then(() => {
+          addDocument();
           console.log('User account created & signed in!');
           toast('User account created & signed in!', toastType.SUCESS_TOAST);
           navigation.navigate(ScreenNameKeys.LOGIN);

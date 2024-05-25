@@ -4,13 +4,15 @@ import styles from './styles';
 import { Icons } from '../../assets/icons';
 import { useNav } from '../../navigation/useNav';
 import { ScreenNameKeys } from '../../constants/ScreenNameKeys';
+import { DrawerActions } from '@react-navigation/native';
 
 interface Props {
     title?: string;
     isLeftIcon?: boolean
+    isHamburger?: any
 }
 
-const Header = ({title, isLeftIcon}: Props) => {
+const Header = ({title, isLeftIcon, isHamburger}: Props) => {
     const navigation = useNav();
     const onLeftIconPress = () => {
         navigation.goBack();
@@ -18,9 +20,18 @@ const Header = ({title, isLeftIcon}: Props) => {
     return(
         <SafeAreaView style={styles.headerContainer}>
             {
-                isLeftIcon && (
+                isLeftIcon && !isHamburger && (
                     <Pressable style={styles.iconView} onPress={onLeftIconPress}>
                     <Icons.BackIcon height={24} width={24}/>
+                </Pressable>
+                )
+            }
+            {
+                isHamburger && (
+                    <Pressable style={styles.iconView} onPress={() => {
+                        navigation.dispatch(DrawerActions.toggleDrawer());
+                    }}>
+                    <Icons.Hamburger height={24} width={24}/>
                 </Pressable>
                 )
             }

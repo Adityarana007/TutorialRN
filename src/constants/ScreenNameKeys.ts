@@ -5,7 +5,7 @@ export enum ScreenNameKeys {
     HOME_TAB = 'HomeTab',
     PROFILE = 'Profile',
     SCROLL_TO_INDEX = 'ScrollToIndex',
-    BASIC_ANIMATION = 'BasicAnimation'
-
+    BASIC_ANIMATION = 'BasicAnimation',
+    FIRESTORE = 'FireStore'
   }
   

@@ -6,4 +6,6 @@ export type RouteParamTypes = {
   ScrollToIndex: undefined;
   BasicAnimation: undefined;
   Register: undefined;
+  Settings: undefined;
+  FireStore: undefined;
 };
