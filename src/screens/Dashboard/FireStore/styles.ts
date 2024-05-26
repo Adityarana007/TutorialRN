@@ -5,7 +5,7 @@ import fonts from "../../../assets/fonts";
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         backgroundColor: colors.white,
         // alignItems: 'center',
     },
@@ -31,6 +31,11 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontFamily: fonts.mulishBold
     },
+    ageText:{
+        color: colors.grey,
+        fontSize: 16,
+        fontFamily: fonts.mulishBold
+    },
     emailText:{
         color: colors.grey,
         fontSize: 14,
@@ -38,6 +43,10 @@ const styles = StyleSheet.create({
     },
     deleteEditView:{
         flexDirection: 'row'
+    },
+    nameAgeView:{
+        flexDirection: 'row',
+        alignItems: 'center'
     }
 });
 export default styles;

@@ -5,6 +5,7 @@ import { Icons } from '../../assets/icons';
 import { useNav } from '../../navigation/useNav';
 import { ScreenNameKeys } from '../../constants/ScreenNameKeys';
 import { DrawerActions } from '@react-navigation/native';
+import { hitSlopProp } from '../../utils/commonStyles';
 
 interface Props {
     title?: string;
@@ -19,6 +20,7 @@ const Header = ({title, isLeftIcon, isHamburger}: Props) => {
     }
     return(
         <SafeAreaView style={styles.headerContainer}>
+
             {
                 isLeftIcon && !isHamburger && (
                     <Pressable style={styles.iconView} onPress={onLeftIconPress}>
@@ -28,7 +30,7 @@ const Header = ({title, isLeftIcon, isHamburger}: Props) => {
             }
             {
                 isHamburger && (
-                    <Pressable style={styles.iconView} onPress={() => {
+                    <Pressable style={styles.iconView} hitSlop={hitSlopProp} onPress={() => {
                         navigation.dispatch(DrawerActions.toggleDrawer());
                     }}>
                     <Icons.Hamburger height={24} width={24}/>

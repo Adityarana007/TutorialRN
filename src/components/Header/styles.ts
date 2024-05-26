@@ -25,7 +25,10 @@ const styles = StyleSheet.create({
         flexGrow:1
     },
     iconView:{
-        left: 20
+        // left: 20,
+        height: 24,
+        width: 24,
+        marginLeft: 20,
     }
   
 });

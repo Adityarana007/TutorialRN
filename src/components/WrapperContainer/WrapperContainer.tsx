@@ -28,10 +28,10 @@ const WrapperContainer = ({children}: Props) => {
   return (
     <View style={{flex: 1}}>
       <StatusBar barStyle={'dark-content'} backgroundColor={colors.white} />
-      <SafeAreaView style={{flex:1}}>
+      {/* <SafeAreaView style={{flex:1}}> */}
       {children}
       <CustomToast />
-      </SafeAreaView>
+      {/* </SafeAreaView> */}
     </View>
   );
 };

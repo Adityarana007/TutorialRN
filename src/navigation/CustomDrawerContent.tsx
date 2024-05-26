@@ -10,7 +10,7 @@ import { DrawerContentScrollView } from "@react-navigation/drawer";
 const CustomDrawerContent = props => {
     const navigation = useNav();
     return(
-        <DrawerContentScrollView>
+        <DrawerContentScrollView bounces={false}>
 
         <TouchableOpacity
         style={[styles.buttonView, {marginTop: 30}]}
@@ -19,6 +19,7 @@ const CustomDrawerContent = props => {
         }}>
             <Text style={styles.buttonText}>FireStore</Text>
         </TouchableOpacity>
+        <View style={styles.separatorView}></View>
             </DrawerContentScrollView>
     )
 };
@@ -35,6 +36,12 @@ const styles = StyleSheet.create({
         color: colors.black,
         fontSize: 16,
         fontFamily: fonts.mulishBold
+    },
+    separatorView:{
+        height: 1,
+        marginTop: 30,
+        width: '100%',
+        backgroundColor: colors.lightGrey
     }
 })
 
