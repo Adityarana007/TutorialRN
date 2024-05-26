@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* TutorialRNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TutorialRNTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-TutorialRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-TutorialRN.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -19,10 +18,10 @@
 		32E06DCB1B1A4343AD44625C /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DD199B426724BB8997B919A /* Mulish-Regular.ttf */; };
 		3BC1AF2562C847BB995B0745 /* Mulish-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26B461CA08B144F6A99D2101 /* Mulish-Light.ttf */; };
 		48092BBE2BEF5B8C00F65A63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48092BBD2BEF5B8C00F65A63 /* GoogleService-Info.plist */; };
+		4F9BFF1E6CCA1EE067D94EBD /* Pods_TutorialRN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B9D0838604471949427595 /* Pods_TutorialRN.framework */; };
 		5F84F72FED0A4C3DABBEFBD0 /* Mulish-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A035E9752F94EF3B36B092A /* Mulish-Italic.ttf */; };
 		68112C9E29E8435DAAA8596F /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E7FE6971E014E0891A4F605 /* Mulish-SemiBold.ttf */; };
 		688718718C2349B2AADB901B /* Mulish-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2566DBE94412471A8F943860 /* Mulish-ExtraLightItalic.ttf */; };
-		7699B88040F8A987B510C191 /* libPods-TutorialRN-TutorialRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-TutorialRN-TutorialRNTests.a */; };
 		7BAE85AA21C54260A717C8F3 /* index.ts in Resources */ = {isa = PBXBuildFile; fileRef = 733932644BC1419FB9A5B1DD /* index.ts */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		86BBD9FC148B4386AC33D22A /* Mulish-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFACFBF71A4846F3B0374B72 /* Mulish-ExtraLight.ttf */; };
@@ -33,6 +32,7 @@
 		BCE6E8B3CE794C93B726039F /* Mulish-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 714192EDF2634F8B8402A0C9 /* Mulish-ExtraBoldItalic.ttf */; };
 		C94C7AC6AA684589AA1E097B /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB735DFC2BA4BFFA76AE5E2 /* BootSplash.storyboard */; };
 		CE9577129F744B33AE5E0A98 /* Mulish-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF30B95167774FCD84557230 /* Mulish-MediumItalic.ttf */; };
+		E766FF387171B59E4DBD26B9 /* Pods_TutorialRN_TutorialRNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24EE3ADA0E2EA0C0B53F759 /* Pods_TutorialRN_TutorialRNTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,6 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TutorialRN/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TutorialRN/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TutorialRN/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-TutorialRN-TutorialRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TutorialRN-TutorialRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DD199B426724BB8997B919A /* Mulish-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mulish-Regular.ttf"; path = "../src/assets/fonts/Mulish-Regular.ttf"; sourceTree = "<group>"; };
 		2566DBE94412471A8F943860 /* Mulish-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mulish-ExtraLightItalic.ttf"; path = "../src/assets/fonts/Mulish-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		26B461CA08B144F6A99D2101 /* Mulish-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mulish-Light.ttf"; path = "../src/assets/fonts/Mulish-Light.ttf"; sourceTree = "<group>"; };
@@ -63,10 +62,10 @@
 		39155A76C70B42F9B63C2B16 /* Mulish-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mulish-Bold.ttf"; path = "../src/assets/fonts/Mulish-Bold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-TutorialRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorialRN.debug.xcconfig"; path = "Target Support Files/Pods-TutorialRN/Pods-TutorialRN.debug.xcconfig"; sourceTree = "<group>"; };
 		3B76E66AD5A6487597F6886C /* Mulish-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mulish-BlackItalic.ttf"; path = "../src/assets/fonts/Mulish-BlackItalic.ttf"; sourceTree = "<group>"; };
+		47B9D0838604471949427595 /* Pods_TutorialRN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TutorialRN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48092BBD2BEF5B8C00F65A63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-TutorialRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorialRN.release.xcconfig"; path = "Target Support Files/Pods-TutorialRN/Pods-TutorialRN.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-TutorialRN-TutorialRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorialRN-TutorialRNTests.debug.xcconfig"; path = "Target Support Files/Pods-TutorialRN-TutorialRNTests/Pods-TutorialRN-TutorialRNTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-TutorialRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TutorialRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6745ECB86AD84A08A7D79704 /* Mulish-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mulish-ExtraBold.ttf"; path = "../src/assets/fonts/Mulish-ExtraBold.ttf"; sourceTree = "<group>"; };
 		714192EDF2634F8B8402A0C9 /* Mulish-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mulish-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Mulish-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		733932644BC1419FB9A5B1DD /* index.ts */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = index.ts; path = ../src/assets/fonts/index.ts; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		BF30B95167774FCD84557230 /* Mulish-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mulish-MediumItalic.ttf"; path = "../src/assets/fonts/Mulish-MediumItalic.ttf"; sourceTree = "<group>"; };
 		BFACFBF71A4846F3B0374B72 /* Mulish-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mulish-ExtraLight.ttf"; path = "../src/assets/fonts/Mulish-ExtraLight.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F24EE3ADA0E2EA0C0B53F759 /* Pods_TutorialRN_TutorialRNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TutorialRN_TutorialRNTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE3345475AA4548B2908571 /* Mulish-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mulish-Black.ttf"; path = "../src/assets/fonts/Mulish-Black.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-TutorialRN-TutorialRNTests.a in Frameworks */,
+				E766FF387171B59E4DBD26B9 /* Pods_TutorialRN_TutorialRNTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-TutorialRN.a in Frameworks */,
+				4F9BFF1E6CCA1EE067D94EBD /* Pods_TutorialRN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,8 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-TutorialRN.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-TutorialRN-TutorialRNTests.a */,
+				47B9D0838604471949427595 /* Pods_TutorialRN.framework */,
+				F24EE3ADA0E2EA0C0B53F759 /* Pods_TutorialRN_TutorialRNTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -660,6 +660,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -732,6 +743,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
