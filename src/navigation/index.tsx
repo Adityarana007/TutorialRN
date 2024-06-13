@@ -6,7 +6,7 @@ import colors from '../theme/colors';
 import {ScreenNameKeys} from '../constants/ScreenNameKeys';
 import Login from '../screens/PreLogin/Login';
 import HomeTabs from './HomeTabs';
-import ScrollToIndex from '../screens/Dashboard/Home/ScrollToIndex';
+import ScrollToIndex from '../screens/Dashboard/Home/ProductsListing';
 import BasicAnimation from '../screens/Dashboard/Home/Basic';
 import Register from '../screens/PreLogin/Register';
 import auth from '@react-native-firebase/auth';
@@ -14,6 +14,11 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import Settings from '../screens/Dashboard/FireStore';
 import CustomDrawerContent from './CustomDrawerContent';
 import FireStore from '../screens/Dashboard/FireStore';
+import ProductsListing from '../screens/Dashboard/Home/ProductsListing';
+import ProductDetails from '../screens/Dashboard/Home/ProductDetail';
+import dynamicLinks from '@react-native-firebase/dynamic-links'
+import { useNav } from './useNav';
+
 
 const Stack = createStackNavigator<RouteParamTypes>();
 const Drawer = createDrawerNavigator();
@@ -33,8 +38,8 @@ const MainStackNavigator = ({user}) => (
     <Stack.Screen name={ScreenNameKeys.REGISTER} component={Register} />
     <Stack.Screen name={ScreenNameKeys.HOME_TAB} component={HomeTabs} />
     <Stack.Screen
-      name={ScreenNameKeys.SCROLL_TO_INDEX}
-      component={ScrollToIndex}
+      name={ScreenNameKeys.PRODUCTS_LISTING}
+      component={ProductsListing}
     />
     <Stack.Screen
       name={ScreenNameKeys.BASIC_ANIMATION}
@@ -43,6 +48,10 @@ const MainStackNavigator = ({user}) => (
        <Stack.Screen
       name={ScreenNameKeys.FIRESTORE}
       component={FireStore}
+    />
+       <Stack.Screen
+      name={ScreenNameKeys.PRODUCT_DETAILS}
+      component={ProductDetails}
     />
   </Stack.Navigator>
 );
@@ -77,12 +86,46 @@ const Routes = () => {
 
   if (initializing) return null;
 
+  const HandleDeepLinking = () => {
+    const navigation = useNav();
+    const handleLink = async (link) => {
+      let productId = link.url.split('=').pop();
+      console.log('linksss', productId)
+      navigation.navigate(ScreenNameKeys.PRODUCT_DETAILS, {
+        id: productId
+      })
+    }
+    useEffect(() => {
+      const unsubscribe = dynamicLinks().onLink(handleLink)
+      return () => unsubscribe; 
+    }, []);
+
+
+    useEffect(() => {
+      const unsubscribe = dynamicLinks().getInitialLink().then(async (link) => {
+        console.log('link in quit state', link);
+        let productId = link.url.split('=').pop();
+        console.log('quitLink', productId)
+        navigation.navigate(ScreenNameKeys.PRODUCT_DETAILS, {
+          id: productId
+        })
+      })
+      return () => unsubscribe; 
+    }, []);
+  
+    return null;
+  }
+
+ 
   return (
     <NavigationContainer theme={MyTheme}>
       {!user ? (
         <MainStackNavigator user={user} />
       ) : (
+        <>
+        <HandleDeepLinking/>
         <DrawerNavigator user={user} />
+        </>
       )}
     </NavigationContainer>
   );

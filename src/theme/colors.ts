@@ -5,5 +5,6 @@ export default {
     grey: '#838c9c',
     lightGrey: '#EDEDED',
     toastRed: '#f26f66',
-    red: '#c20606'
+    red: '#c20606',
+    green: '#10b307'
   };

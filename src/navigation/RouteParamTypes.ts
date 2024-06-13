@@ -3,9 +3,12 @@ export type RouteParamTypes = {
   Home: undefined;
   HomeTab: undefined;
   Profile: undefined;
-  ScrollToIndex: undefined;
+  ProductsListing: undefined;
   BasicAnimation: undefined;
   Register: undefined;
   Settings: undefined;
   FireStore: undefined;
+  ProductDetails: {
+    id: any
+  };
 };

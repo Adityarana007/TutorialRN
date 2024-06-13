@@ -23,8 +23,6 @@ interface UserData {
 const FireStore = () => {
   const [usersData, setUsersData] = useState<UserData[]>([]);
   const [realTimeData, setRealTimeData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   function onResult(QuerySnapshot) {
     const realtimedata = QuerySnapshot?.docs?.map(item => ({

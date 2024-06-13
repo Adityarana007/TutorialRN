@@ -4,8 +4,9 @@ export enum ScreenNameKeys {
     REGISTER = 'Register',
     HOME_TAB = 'HomeTab',
     PROFILE = 'Profile',
-    SCROLL_TO_INDEX = 'ScrollToIndex',
+    PRODUCTS_LISTING = 'ProductsListing',
     BASIC_ANIMATION = 'BasicAnimation',
-    FIRESTORE = 'FireStore'
+    FIRESTORE = 'FireStore',
+    PRODUCT_DETAILS = 'ProductDetails'
   }
   
