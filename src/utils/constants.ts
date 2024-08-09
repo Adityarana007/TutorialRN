@@ -34,4 +34,9 @@ export const toast = (title: string, type: string) => {
     ERROR_TOAST: 'errorToast',
   };
 
+
+  export const sendBirdAPICreds = {
+      apiKey: 'E3C8890A-F455-46F6-B159-7907E9942CA1',
+      apiToken: '6aa83dac9f42ceaf191f0bfbdb5b45a283414cdc',
+  };
   

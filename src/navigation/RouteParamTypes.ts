@@ -11,4 +11,5 @@ export type RouteParamTypes = {
   ProductDetails: {
     id: any
   };
+  ChatScreen: undefined
 };

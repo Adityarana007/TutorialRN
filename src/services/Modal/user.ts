@@ -2,6 +2,7 @@ export type UserData = {
     name?: string;
     profileUrl?: string;
     email?: string;
+    id?: any;
 };
 
 export interface DataModel {
@@ -13,6 +14,6 @@ export const initialData: DataModel = {
         name: '',
         profileUrl: '',
         email: '',
-
+        id: null
     }
 };

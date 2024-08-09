@@ -7,6 +7,7 @@ export enum ScreenNameKeys {
     PRODUCTS_LISTING = 'ProductsListing',
     BASIC_ANIMATION = 'BasicAnimation',
     FIRESTORE = 'FireStore',
-    PRODUCT_DETAILS = 'ProductDetails'
+    PRODUCT_DETAILS = 'ProductDetails',
+    CHAT_SCREEN = 'ChatScreen'
   }
   

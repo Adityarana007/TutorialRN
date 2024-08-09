@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {RouteParamTypes} from './RouteParamTypes';
@@ -6,18 +6,25 @@ import colors from '../theme/colors';
 import {ScreenNameKeys} from '../constants/ScreenNameKeys';
 import Login from '../screens/PreLogin/Login';
 import HomeTabs from './HomeTabs';
-import ScrollToIndex from '../screens/Dashboard/Home/ProductsListing';
 import BasicAnimation from '../screens/Dashboard/Home/Basic';
 import Register from '../screens/PreLogin/Register';
 import auth from '@react-native-firebase/auth';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import Settings from '../screens/Dashboard/FireStore';
 import CustomDrawerContent from './CustomDrawerContent';
 import FireStore from '../screens/Dashboard/FireStore';
 import ProductsListing from '../screens/Dashboard/Home/ProductsListing';
 import ProductDetails from '../screens/Dashboard/Home/ProductDetail';
 import dynamicLinks from '@react-native-firebase/dynamic-links'
 import { useNav } from './useNav';
+import ChatScreen from '../screens/Dashboard/ChatScreen';
+import SendbirdChat from '@sendbird/chat';
+import { GroupChannelModule } from '@sendbird/chat/groupChannel';
+import { sendBirdAPICreds } from '../utils/constants';
+import { UserContext } from '../stores/userStorage';
+import { sbConnect } from '../sendbird/sendbirdActions';
+import { GroupChannelCreateScreen, GroupChannelListScreen, GroupChannelScreen } from '../screens/Dashboard/sendbirdUiKit';
+import { useConnection } from '@sendbird/uikit-react-native';
+
 
 
 const Stack = createStackNavigator<RouteParamTypes>();
@@ -29,6 +36,8 @@ const MyTheme = {
     background: colors.white,
   },
 };
+const APP_ID = sendBirdAPICreds.apiKey;
+
 
 const MainStackNavigator = ({user}) => (
   <Stack.Navigator
@@ -53,6 +62,19 @@ const MainStackNavigator = ({user}) => (
       name={ScreenNameKeys.PRODUCT_DETAILS}
       component={ProductDetails}
     />
+    <Stack.Screen
+      name={ScreenNameKeys.CHAT_SCREEN}
+      component={ChatScreen}
+    />
+    <Stack.Screen
+      name={'GroupChannelList'} component={GroupChannelListScreen}
+    />
+    <Stack.Screen
+      name={'GroupChannelCreate'} component={GroupChannelCreateScreen}
+    />
+    <Stack.Screen
+      name={'GroupChannel'} component={GroupChannelScreen}
+    />
   </Stack.Navigator>
 );
 
@@ -72,6 +94,7 @@ const DrawerNavigator = ({user}) => (
 const Routes = () => {
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
+  const {data, setDataToStore} = useContext(UserContext);
 
   // Handle user state changes
   function onAuthStateChanged(user) {
@@ -115,6 +138,28 @@ const Routes = () => {
   
     return null;
   }
+
+  // // sendbird initialization code starts ----
+  // useEffect(() => {
+  //   console.log('hsjksh')
+  //   // sendbirdInit();
+  //   const params = {
+  //     userId: data.userData.id,
+  //     nickname: data.userData.name,
+  //   }
+  //   // sbConnect(params.userId, params.nickname)
+  //   connect(String(params.userId), { nickname: data.userData.name })
+  //  }, [])
+
+  //  const sendbirdInit = () => {
+  //   const params = {
+  //     userId: data.userData.id,
+  //     nickname: data.userData.name,
+  //   }
+  //   // sbConnect(params.userId, params.nickname)
+  //   connect(String(params.userId), { nickname: data.userData.name })
+  //  }
+  //  sendbirdInit();
 
  
   return (

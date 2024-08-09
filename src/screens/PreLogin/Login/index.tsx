@@ -1,10 +1,8 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {
-  Alert,
   Platform,
   Pressable,
   SafeAreaView,
-  ScrollView,
   Text,
   View,
 } from 'react-native';
@@ -19,7 +17,6 @@ import {toast, toastType} from '../../../utils/constants';
 import auth from '@react-native-firebase/auth';
 import {
   GoogleSignin,
-  statusCodes,
 } from '@react-native-google-signin/google-signin';
 import { UserContext } from '../../../stores/userStorage';
 
@@ -85,7 +82,8 @@ const Login = () => {
           ...data.userData,
           name: user?.name,
           profileUrl: user?.photo,
-          email: user?.email
+          email: user?.email,
+          id: user?.id
         }
       })
       toast('Logged in successfully.', toastType.SUCESS_TOAST);
